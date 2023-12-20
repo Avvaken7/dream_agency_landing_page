@@ -1,0 +1,33 @@
+.primary {
+    background-color: #331B3B;
+    padding: 20px 48px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.34px;
+    border: 1px solid #331B3B;
+    transition: all .3s ease-in-out;
+}
+
+.primary:hover {
+    border: 1px solid #331B3B;
+    background-color: transparent;
+    color: #331B3B;
+    cursor: pointer;
+}
+
+.secondary {
+    @extend .primary;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #000;
+    border-radius: 0px;
+    padding: 13px 51px;
+}
+
+.secondary:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #000;
+}

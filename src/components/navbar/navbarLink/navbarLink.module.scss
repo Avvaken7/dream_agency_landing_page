@@ -1,0 +1,45 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 41px;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    list-style: none;
+}
+
+.listItemLink {
+    position: relative;
+    color: #331B3B;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: text-shadow .3s;
+    letter-spacing: 0.16px;
+    text-decoration: none;
+}
+
+.listItemLink:hover {
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+
+.listItemLink {    
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #FDC221;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover:after {
+        transform: scaleX(.5);
+        transform-origin: bottom left;
+    }
+}

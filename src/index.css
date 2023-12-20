@@ -1,0 +1,9 @@
+@import 'normalize.css';
+
+body {
+  font-family: 'Hind Vadodara', sans-serif;
+  color: #331B3B;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,20 @@
+.heroImageMask {
+    mask: url('../../../assets/svgMask.svg');
+    mask-repeat: no-repeat;
+    mask-position: top right;
+}
+
+.heroSectionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    margin-top: 82px;
+}
+
+.description {
+    color: rgba(51, 27, 59, 0.66);
+    margin-top: 27px;
+    line-height: 146.3%;
+    letter-spacing: 0.34px;
+}

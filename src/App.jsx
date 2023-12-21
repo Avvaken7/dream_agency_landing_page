@@ -1,5 +1,6 @@
-import Container from './components/container/Container'
-import Navbar from './components/navbar/Navbar'
+import Container from './components/container/Container';
+import Navbar from './components/navbar/Navbar';
+import Hero from './components/sections/hero/Hero';
 // import TitleText from './components/TitleText/TitleText'
 // import Button from './components/button/Button'
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Container>
         <Navbar/>
+        <Hero/>
       </Container>
     </>
   )

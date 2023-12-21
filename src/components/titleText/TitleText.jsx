@@ -3,15 +3,15 @@ import styles from './titleText.module.scss';
 
 const TitleText = ({ text, span, textSize, underlineSpan }) => {
 
-return (
-    <>
-        <p className={styles.heroTextBlock} style={{ fontSize: textSize }}>
-            <span className={styles.strongText}>{text}</span>
-            <span>{span}</span>
-            <span className={styles.underlineSpan}>{underlineSpan}</span>
-        </p>
-    </>
-)
+    return (
+        <>
+            <p className={styles.heroTextBlock} style={{ fontSize: textSize }}>
+                <span className={styles.strongText}>{text}</span>
+                <span>{span}</span>
+                <span className={styles.underlineSpan}>{underlineSpan}</span>
+            </p>
+        </>
+    )
 
 };
 

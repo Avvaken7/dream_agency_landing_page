@@ -1,4 +1,6 @@
 @import 'normalize.css';
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 body {
   font-family: 'Hind Vadodara', sans-serif;
@@ -6,9 +8,4 @@ body {
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }

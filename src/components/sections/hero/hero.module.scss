@@ -1,10 +1,5 @@
-.heroImageMask {
-    mask: url('../../../assets/svgMask.svg');
-    mask-repeat: no-repeat;
-    mask-position: top right;
-}
-
 .heroSectionWrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,9 +7,28 @@
     margin-top: 82px;
 }
 
+.heroSectionWrapper::before {
+    display: block;
+    position: fixed;
+    content: '';
+    background: url('../../../assets/afterHeroImageTopRight.svg') no-repeat;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 520px;
+    height: 712px;
+}
+
+.heroSectionText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    gap: 30px;
+}
+
 .description {
     color: rgba(51, 27, 59, 0.66);
-    margin-top: 27px;
     line-height: 146.3%;
     letter-spacing: 0.34px;
 }

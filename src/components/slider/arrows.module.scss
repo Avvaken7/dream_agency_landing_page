@@ -1,0 +1,22 @@
+.nextArrow,
+.prevArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 31px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 50%;
+    top: 70%;
+}
+
+.nextArrow {    
+    left: -44px;
+}
+
+.prevArrow {
+    transform: rotate(180deg);
+    left: -88px;
+}

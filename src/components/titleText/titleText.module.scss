@@ -1,27 +1,12 @@
-.heroTextBlock {
-    display: block;
-    font-weight: 300;
-    line-height: 99.8%;
-    letter-spacing: -0.87px;
-    margin: 0;
-}
-
 .strongText {
     margin: 0;
     font-weight: 700;
 }
 
-.underlineSpan {
-    position: relative;
-}
-
-.underlineSpan::after {
-    content: '';
-    position: absolute;    
-    bottom: 25%;
-    right: 0;
-    left: 0;    
-    height: 14%;
-    background-color: #FDC221;
-    z-index: -1;
+.underlineText {
+    display: inline-block;
+    background-image: linear-gradient(to right, #FDC221, #FDC221);
+    background-position: 0px 80%;
+    background-size: 100% 20px;
+    background-repeat: no-repeat;
 }

@@ -42,13 +42,27 @@ const Services = () => {
             icon: marketing,
             iconColor: '#FFD4D4',
         },
+        {
+            id: 5,
+            title: 'Design',
+            description: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+            icon: marketing,
+            iconColor: '#ccc',
+        },
+        {
+            id: 6,
+            title: 'Mobile',
+            description: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+            icon: mobileApp,
+            iconColor: '#40b7fd',
+        },
     ];
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
         nextArrow: <NextArrow />,
@@ -57,9 +71,12 @@ const Services = () => {
 
     return (
         <div className={styles.sliderWrapper}>
-            <div className={styles.servicesTitle}>
-                <TitleText text='What We Do' span='For Your' underlineSpan='Business' textSize='48px' />
-            </div>
+            <TitleText
+                primaryText='What We Do '
+                secondaryText='For Your '
+                underlineText='Business'
+                className={styles.servicesTitle}
+            />
             <Slider {...settings}>
                 {
                     slides.map((slide) => (

@@ -1,27 +1,31 @@
 import PropTypes from 'prop-types';
 import styles from './titleText.module.scss';
 
-const TitleText = ({ text, span, textSize, underlineSpan }) => {
+const TitleText = ({ primaryText, secondaryText, underlineText, className }) => {
 
     return (
-        <>
-            <p className={styles.heroTextBlock} style={{ fontSize: textSize }}>
-                <span className={styles.strongText}>{text}</span>
-                <span>{span}</span>
-                <span className={styles.underlineSpan}>{underlineSpan}</span>
-            </p>
-        </>
+        <div className={className}>
+            <p className={styles.strongText}>{primaryText}</p>
+            <span>
+                {secondaryText}
+                <span className={styles.underlineText}>
+                    {underlineText}
+                </span>
+            </span>
+
+        </div>
     )
 
 };
 
 
 TitleText.propTypes = {
+    className: PropTypes.string,
     children: PropTypes.node,
     textSize: PropTypes.string,
-    text: PropTypes.string,
-    span: PropTypes.string,
-    underlineSpan: PropTypes.string,
+    primaryText: PropTypes.string,
+    secondaryText: PropTypes.string,
+    underlineText: PropTypes.string,
 };
 
 export default TitleText;

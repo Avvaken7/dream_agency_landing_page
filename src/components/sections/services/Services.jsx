@@ -3,6 +3,7 @@ import ServicesCard from './servicesCard/ServicesCard';
 import NextArrow from '../../slider/NextArrow';
 import PrevArrow from '../../slider/PrevArrow';
 import TitleText from '../../titleText/TitleText';
+import Container from '../../container/Container';
 
 import marketing from '../../../assets/servicesIcons/marketing.svg';
 import mobileApp from '../../../assets/servicesIcons/mobile_app_dev.svg';
@@ -62,7 +63,7 @@ const Services = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         nextArrow: <NextArrow />,
@@ -77,6 +78,7 @@ const Services = () => {
                 underlineText='Business'
                 className={styles.servicesTitle}
             />
+            <Container>
             <Slider {...settings}>
                 {
                     slides.map((slide) => (
@@ -86,6 +88,7 @@ const Services = () => {
                     ))
                 }
             </Slider>
+            </Container>
         </div>
     );
 };

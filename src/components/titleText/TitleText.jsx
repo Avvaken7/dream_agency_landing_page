@@ -20,6 +20,7 @@ const TitleText = ({ primaryText, secondaryText, underlineText, className }) => 
 
 
 TitleText.propTypes = {
+    // as: PropTypes.elementType,
     className: PropTypes.string,
     children: PropTypes.node,
     textSize: PropTypes.string,

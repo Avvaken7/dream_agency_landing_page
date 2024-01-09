@@ -1,0 +1,20 @@
+.ourWorksWrapper {
+    border-radius: 400px 0px 0px 0px;
+    background: rgba(255, 222, 212, 0.30);
+}
+
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ourWorkText {
+    flex: 2;
+    font-size: 48px;
+}
+
+.descriptionText {
+    flex: 1;
+}

@@ -60,6 +60,7 @@ const Services = () => {
     ];
 
     const settings = {
+        lazyLoad: true,
         dots: false,
         infinite: true,
         speed: 500,
@@ -67,7 +68,30 @@ const Services = () => {
         slidesToScroll: 1,
         centerMode: true,
         nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
@@ -79,15 +103,15 @@ const Services = () => {
                 className={styles.servicesTitle}
             />
             <Container>
-            <Slider {...settings}>
-                {
-                    slides.map((slide) => (
-                        <div key={slide.id}>
-                            <ServicesCard {...slide} />
-                        </div>
-                    ))
-                }
-            </Slider>
+                <Slider {...settings}>
+                    {
+                        slides.map((slide) => (
+                            <div key={slide.id}>
+                                <ServicesCard {...slide} />
+                            </div>
+                        ))
+                    }
+                </Slider>
             </Container>
         </div>
     );

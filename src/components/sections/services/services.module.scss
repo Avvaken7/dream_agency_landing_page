@@ -1,7 +1,19 @@
 .sliderWrapper {
     background-color: #ECF7FF;
-    border-radius: 23% 50% 25% 25% / 0% 100% 0% 0%;
+    position: relative;
+    border-radius: 0px 400px 0px 0px;
     padding: 100px 0px;
+}
+
+.sliderWrapper::after {
+    position: absolute;
+    content: '';
+    background: url('../../../assets/servicesEllipse.png') no-repeat;
+    bottom: -116px;
+    right: 0;
+    z-index: -1;
+    width: 478px;    
+    height: 578px;
 }
 
 .servicesTitle {

@@ -1,0 +1,45 @@
+.aboutSectionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 82px;
+    margin: 148px 0px 100px 0px;
+}
+
+.img {
+    mask: url('../../../assets/aboutAssets/aboutImageMask.svg') no-repeat;
+}
+
+.titleTextStyles {
+    margin-bottom: 22px;
+    font-size: 48px;
+}
+
+.aboutImageWrap {
+    position: relative;
+}
+
+.aboutImageWrap::before {
+    position: absolute;
+    content: "";
+    background: url(/src/assets/aboutAssets/beforeFriendImage.svg) no-repeat;
+    top: -24px;
+    left: -19px;
+    width: 657px;
+    height: 595px;
+}
+
+.aboutImageWrap::after {
+    position: absolute;
+    content: "";
+    background: url('../../../assets/aboutAssets/afterFriendImage.png') no-repeat;
+    top: -14px;
+    left: 0;
+    width: 657px;
+    height: 595px;
+    z-index: -1;
+}
+
+.buttonInAboutSectionStyle {
+    margin-top: 70px;
+}

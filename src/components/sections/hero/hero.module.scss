@@ -1,3 +1,19 @@
+.stickyBackground {
+    position: relative;
+}
+
+.stickyBackground::before {
+    display: block;
+    position: absolute;
+    content: '';
+    background: url('../../../assets/afterHeroImageTopRight.svg') no-repeat;
+    top: -170px;
+    right: 0;
+    z-index: -1;
+    width: 520px;
+    height: 712px;
+}
+
 .titleWrapper {
     display: flex;
     flex-direction: column;
@@ -6,7 +22,6 @@
 }
 
 .heroSectionWrapper {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,23 +29,11 @@
     margin: 82px 0px;
 }
 
-.heroSectionWrapper::before {
-    display: block;
-    position: fixed;
-    content: '';
-    background: url('../../../assets/afterHeroImageTopRight.svg') no-repeat;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 520px;
-    height: 712px;
-}
-
 .heroSectionText {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 30px;
 }
 

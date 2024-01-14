@@ -1,9 +1,84 @@
+import Slider from 'react-slick';
+
 import Container from "../../container/Container";
 import DescriptionText from "../../descriptionText/DescriptionText";
 import TitleText from "../../titleText/TitleText";
+import NextArrow from "../../slider/NextArrow";
+import PrevArrow from "../../slider/PrevArrow";
+import WorksCard from "./worksCards/WorksCard";
+
+import firstSlideImageDesktop from '../../../assets/worksCardImages/uiSoup-desktop.svg';
+import firstSlideImageMobile from '../../../assets/worksCardImages/uiSoup-mobile.svg';
+
+import secondSlideImageDesktop from '../../../assets/worksCardImages/goldcrownLabs-desktop.svg';
+import secondSlideImageMobile from '../../../assets/worksCardImages/goldcrownLabs-mobile.svg';
 
 import styles from './ourWork.module.scss';
 const OurWorks = () => {
+
+    const slides = [
+        {
+            id: 1,
+            title: 'UI Soup',
+            icon: firstSlideImageDesktop,
+            iconMobile: firstSlideImageMobile,
+        },
+        {
+            id: 2,
+            title: 'Goldcrown Labs',
+            icon: secondSlideImageDesktop,
+            iconMobile: secondSlideImageMobile,
+        },
+        {
+            id: 3,
+            title: 'UI Soup',
+            icon: firstSlideImageDesktop,
+            iconMobile: firstSlideImageMobile,
+        },
+        {
+            id: 4,
+            title: 'Goldcrown Labs',
+            icon: secondSlideImageDesktop,
+            iconMobile: secondSlideImageMobile,
+        },
+    ];
+
+    const settings = {
+        lazyLoad: true,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
+
     return (
         <div className={styles.ourWorksWrapper}>
             <Container>
@@ -15,9 +90,18 @@ const OurWorks = () => {
                         className={styles.ourWorkText}
                     />
                     <DescriptionText className={styles.descriptionText}>
-                        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </DescriptionText>
                 </div>
+                <Slider {...settings}>
+                    {
+                        slides.map((slide) => (
+                            <div key={slide.id}>
+                                <WorksCard {...slide} />
+                            </div>
+                        ))
+                    }
+                </Slider>
             </Container>
         </div>
 

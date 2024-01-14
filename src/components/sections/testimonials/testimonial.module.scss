@@ -1,0 +1,46 @@
+.testimonialWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 92px;
+}
+
+.desrcText {
+    color: #331B3B;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
+    padding: 39px 29px;
+}
+
+.titleTextStyles {
+    font-size: 48px;
+    text-align: center;
+    margin: 75px 0px 60px 0px;
+}
+
+.quotesStyle {
+    width: 64px;
+    height: 64px;
+}
+
+.authorStyles {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+.authorStyles::before {
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: -16px;
+    width: 11px;
+    height: 3px;
+    background: #FDC221;
+}

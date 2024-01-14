@@ -3,11 +3,10 @@ import nextArrow from '../../assets/sliderArrows/nextArrow.svg';
 
 import styles from './arrows.module.scss';
 
-const NextArrow = (props) => {
-
+const NextArrow = ({ onClick }) => {
 
     return (
-        <div className={styles.nextArrow} onClick={props.onClick} >
+        <div className={styles.nextArrow} onClick={onClick}>
             <img src={nextArrow} alt="next Arrow image" />
         </div >
     );
@@ -15,7 +14,6 @@ const NextArrow = (props) => {
 
 NextArrow.propTypes = {
     onClick: PropTypes.func,
-    style: PropTypes.object
 };
 
 export default NextArrow;

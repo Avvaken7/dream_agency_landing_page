@@ -9,14 +9,16 @@
     cursor: pointer;
     border: 2px solid #000;
     border-radius: 50%;
-    top: 70%;
+    top: 0;
 }
 
-.nextArrow {    
-    left: -44px;
+.nextArrow {
+    left: 8%;
+    top: 106%;
 }
 
 .prevArrow {
     transform: rotate(180deg);
-    left: -88px;
+    left: 4%;
+    top: 106%
 }

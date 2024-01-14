@@ -1,11 +1,16 @@
+import PropTypes from 'prop-types';
 import styles from './navbarLogo.module.scss';
 
-const NavbarLogo = () => {
+const NavbarLogo = ({ className }) => {
     return (
         <>
-            <span className={styles.logo}>dream agency</span>
+            <span className={`${styles.logo} ${className}`}>dream agency</span>
         </>
     );
 };
+
+NavbarLogo.propTypes = {
+    className: PropTypes.string,
+}
 
 export default NavbarLogo;

@@ -1,0 +1,92 @@
+.footerWrapper {
+    background: #000;
+    border-radius: 0px 158px 0px 0px;
+    color: #fff;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: center;
+    gap: 235px;
+    padding: 65px 0px;
+}
+
+.footerLink {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 159.3%;
+    letter-spacing: 0.32px;
+    transition: color .3s ease-in-out;
+}
+
+.footerLink:hover {
+    color: #FDC021;
+    text-decoration: underline;
+}
+
+.footerLogo {
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 0.36px;
+}
+
+.footerDesciption {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 159.3%;
+    letter-spacing: 0.32px;
+}
+
+.form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.form input {
+    padding: 13px 110px 13px 13px;
+    border: 1px solid #FFF;
+    background: transparent;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    color: #fff;
+}
+
+.form input::placeholder {
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.form input:focus::placeholder {
+    color: transparent;
+}
+
+.form button {
+    padding: 14px 51px;
+    color: #000;
+    background: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 159.3%;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    border: 1px solid #FFF;
+}
+
+.form button:hover {
+    cursor: pointer;
+}
+
+.footerText {
+    flex: 2;
+}
+
+.footerMapContent {
+    flex: 2;
+}

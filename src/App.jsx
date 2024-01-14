@@ -5,6 +5,8 @@ import Hero from './components/sections/hero/Hero';
 import Services from './components/sections/services/Services';
 import About from './components/sections/about/About';
 import OurWorks from './components/sections/works/OurWorks';
+import Testimonial from './components/sections/testimonials/Testimonial';
+import Footer from './components/footer/Footer';
 
 import './App.css'
 function App() {
@@ -22,6 +24,12 @@ function App() {
       </Container>
       <ContainerFluid>
         <OurWorks />
+      </ContainerFluid>
+      <Container>
+        <Testimonial />
+      </Container>
+      <ContainerFluid>
+        <Footer />
       </ContainerFluid>
     </>
   )

@@ -4,6 +4,7 @@ import NextArrow from '../../slider/NextArrow';
 import PrevArrow from '../../slider/PrevArrow';
 import TitleText from '../../titleText/TitleText';
 import Container from '../../container/Container';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import marketing from '../../../assets/servicesIcons/marketing.svg';
 import mobileApp from '../../../assets/servicesIcons/mobile_app_dev.svg';
@@ -95,25 +96,27 @@ const Services = () => {
     };
 
     return (
-        <div className={styles.sliderWrapper}>
-            <TitleText
-                primaryText='What We Do '
-                secondaryText='For Your '
-                underlineText='Business'
-                className={styles.servicesTitle}
-            />
-            <Container>
-                <Slider {...settings}>
-                    {
-                        slides.map((slide) => (
-                            <div key={slide.id}>
-                                <ServicesCard {...slide} />
-                            </div>
-                        ))
-                    }
-                </Slider>
-            </Container>
-        </div>
+        <AnimationOnScroll animateIn='animate__fadeInDown'>
+            <div className={styles.sliderWrapper}>
+                <TitleText
+                    primaryText='What We Do '
+                    secondaryText='For Your '
+                    underlineText='Business'
+                    className={styles.servicesTitle}
+                />
+                <Container>
+                    <Slider {...settings}>
+                        {
+                            slides.map((slide) => (
+                                <div key={slide.id}>
+                                    <ServicesCard {...slide} />
+                                </div>
+                            ))
+                        }
+                    </Slider>
+                </Container>
+            </div >
+        </AnimationOnScroll>
     );
 };
 

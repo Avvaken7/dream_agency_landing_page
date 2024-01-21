@@ -12,7 +12,7 @@
     bottom: -116px;
     right: 0;
     z-index: -1;
-    width: 478px;    
+    width: 478px;
     height: 578px;
 }
 
@@ -23,4 +23,10 @@
     flex-direction: column;
     margin-bottom: 110px;
     font-size: 48px;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+    .servicesTitle {
+        font-size: 64px;
+    }
 }

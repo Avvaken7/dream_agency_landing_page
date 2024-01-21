@@ -13,7 +13,7 @@
 
 .footerLink {
     text-transform: uppercase;
-    color: #fff;
+    color: #FDC021;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -23,12 +23,11 @@
 }
 
 .footerLink:hover {
-    color: #FDC021;
     text-decoration: underline;
 }
 
 .footerLogo {
-    color: #fff;
+    color: #FDC021;
     font-size: 36px;
     letter-spacing: 0.36px;
 }
@@ -89,4 +88,9 @@
 
 .footerMapContent {
     flex: 2;
+}
+
+.mapImageStyle {
+    max-width: 100%;
+    height: auto;
 }

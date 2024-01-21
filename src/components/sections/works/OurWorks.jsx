@@ -1,4 +1,5 @@
 import Slider from 'react-slick';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import Container from "../../container/Container";
 import DescriptionText from "../../descriptionText/DescriptionText";
@@ -7,11 +8,11 @@ import NextArrow from "../../slider/NextArrow";
 import PrevArrow from "../../slider/PrevArrow";
 import WorksCard from "./worksCards/WorksCard";
 
-import firstSlideImageDesktop from '../../../assets/worksCardImages/uiSoup-desktop.svg';
-import firstSlideImageMobile from '../../../assets/worksCardImages/uiSoup-mobile.svg';
+import firstSlideImageDesktop from '../../../assets/worksCardImages/uiSoup-desktop.png';
+import firstSlideImageMobile from '../../../assets/worksCardImages/uiSoup-mobile.png';
 
-import secondSlideImageDesktop from '../../../assets/worksCardImages/goldcrownLabs-desktop.svg';
-import secondSlideImageMobile from '../../../assets/worksCardImages/goldcrownLabs-mobile.svg';
+import secondSlideImageDesktop from '../../../assets/worksCardImages/goldcrownLabs-desktop.png';
+import secondSlideImageMobile from '../../../assets/worksCardImages/goldcrownLabs-mobile.png';
 
 import styles from './ourWork.module.scss';
 const OurWorks = () => {
@@ -55,6 +56,13 @@ const OurWorks = () => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
@@ -62,9 +70,16 @@ const OurWorks = () => {
                 }
             },
             {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
@@ -80,6 +95,7 @@ const OurWorks = () => {
 
 
     return (
+        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
         <div className={styles.ourWorksWrapper}>
             <Container>
                 <div className={styles.titleWrapper}>
@@ -102,8 +118,9 @@ const OurWorks = () => {
                         ))
                     }
                 </Slider>
-            </Container>
-        </div>
+            </Container >
+        </div >
+        </AnimationOnScroll>
 
     );
 };

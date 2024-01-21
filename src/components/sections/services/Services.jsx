@@ -72,6 +72,13 @@ const Services = () => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                }
+            },
+            {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
@@ -79,9 +86,16 @@ const Services = () => {
                 }
             },
             {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
@@ -96,7 +110,7 @@ const Services = () => {
     };
 
     return (
-        <AnimationOnScroll animateIn='animate__fadeInDown'>
+        <AnimationOnScroll animateOnce={true} animateIn="animate__fadeIn">
             <div className={styles.sliderWrapper}>
                 <TitleText
                     primaryText='What We Do '

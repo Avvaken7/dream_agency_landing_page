@@ -1,7 +1,11 @@
 .navbar {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: 43px;
+}
+@media (max-width: 767px) {
+    .navbar {
+        margin-top: 20px;
+    }
 }

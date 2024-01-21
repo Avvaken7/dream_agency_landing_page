@@ -10,15 +10,30 @@
     border: 2px solid #000;
     border-radius: 50%;
     top: 0;
+    top: 106%;
 }
 
 .nextArrow {
-    left: 8%;
-    top: 106%;
+    left: 8%;    
 }
 
 .prevArrow {
     transform: rotate(180deg);
     left: 4%;
-    top: 106%
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    .nextArrow, .prevArrow {
+        width: 41px;
+        height: 40px;
+        top: 120%;
+    }
+
+    .nextArrow {
+        left: 10%;       
+    }
+
+    .prevArrow {
+        left: 2%;        
+    }
 }

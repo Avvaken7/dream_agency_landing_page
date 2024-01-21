@@ -1,8 +1,10 @@
 import TitleText from '../../titleText/TitleText';
 import DescriptionText from '../../descriptionText/DescriptionText';
-import quotes from '../../../assets/quoteImg.svg';
-import styles from './testimonial.module.scss';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
+import quotes from '../../../assets/quoteImg.svg';
+
+import styles from './testimonial.module.scss';
 const Testimonial = () => {
 
     const testimonialCard = [
@@ -30,11 +32,17 @@ const Testimonial = () => {
                 {
                     testimonialCard.map((item) => (
                         <div key={item.id} className={styles.card}>
-                            <img src={quotes} alt="Testimonial quotes" className={styles.quotesStyle}/>
-                            <DescriptionText className={styles.desrcText}>
-                                Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-                            </DescriptionText>
-                            <span className={styles.authorStyles}>{item.author}</span>
+                            <AnimationOnScroll animateOnce={true} animateIn='animate__fadeInLeft'>
+                                <img src={quotes} alt="Testimonial quotes" className={styles.quotesStyle} />
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateOnce={true} animateIn='animate__fadeIn'>
+                                <DescriptionText className={styles.desrcText}>
+                                    Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                                </DescriptionText>
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateOnce={true} animateIn='animate__fadeInLeft'>
+                                <span className={styles.authorStyles}>{item.author}</span>
+                            </AnimationOnScroll>
                         </div>
                     ))
                 }

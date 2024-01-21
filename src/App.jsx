@@ -12,25 +12,31 @@ import './App.css'
 function App() {
   return (
     <>
-      <Container>
-        <Navbar />
-      </Container>
-      <Hero />
-      <ContainerFluid>
-        <Services />
-      </ContainerFluid>
-      <Container>
-        <About />
-      </Container>
-      <ContainerFluid>
-        <OurWorks />
-      </ContainerFluid>
-      <Container>
-        <Testimonial />
-      </Container>
-      <ContainerFluid>
-        <Footer />
-      </ContainerFluid>
+      <header>
+        <Container>
+          <Navbar />
+        </Container>
+      </header>
+      <main>
+        <Hero />
+        <ContainerFluid>
+          <Services />
+        </ContainerFluid>
+        <Container>
+          <About />
+        </Container>
+        <ContainerFluid>
+          <OurWorks />
+        </ContainerFluid>
+        <Container>
+          <Testimonial />
+        </Container>
+      </main>
+      <footer>
+        <ContainerFluid>
+          <Footer />
+        </ContainerFluid>
+      </footer>
     </>
   )
 }

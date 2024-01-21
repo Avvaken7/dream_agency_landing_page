@@ -6,13 +6,12 @@ import styles from './navbar.module.scss';
 
 const Navbar = () => {
     return (
-        <header>
-            <div className={styles.navbar}>
-                <NavbarLink />
-                <NavbarLogo />
-                <NavbarSocialLink />
-            </div>
-        </header>
+        <div className={styles.navbar}>
+            <NavbarLink />
+            <NavbarLogo />
+            <NavbarSocialLink />
+        </div >
+
     );
 };
 

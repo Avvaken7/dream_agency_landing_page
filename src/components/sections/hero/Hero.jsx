@@ -4,7 +4,7 @@ import ContainerFluid from '../../container/ContainerFluid';
 import Container from '../../container/Container';
 import Button from '../../button/Button';
 
-import heroImage from '../../../assets/hero-section-image.png';
+import heroImage from '../../../assets/heroSection/heroImage.webp';
 
 import styles from './hero.module.scss';
 
@@ -13,7 +13,8 @@ const Hero = () => {
         <ContainerFluid className={styles.stickyBackground}>
             <Container>
                 <div className={styles.heroSectionWrapper}>
-                    <div className={styles.heroSectionText}>
+                    {/* <div className={styles.heroSectionText}> */}
+                    <div className={`${styles.heroSectionText} ${styles.animated} ${styles.fadeIn}`}>
                         <TitleText
                             primaryText='We Help you '
                             secondaryText='to grow your '
@@ -25,7 +26,10 @@ const Hero = () => {
                         </DescriptionText>
                         <Button isLink={true} styleType={'primary'}>get started</Button>
                     </div>
-                    <img src={heroImage} alt="hero" className={styles.heroImageMask} />
+                    <div className={`${styles.imageWrap} ${styles.animated} ${styles.fadeIn}`}>
+                        <img src={heroImage} alt="hero" className={styles.heroImageMask} />
+                    </div>
+
                 </div>
             </Container>
         </ContainerFluid>

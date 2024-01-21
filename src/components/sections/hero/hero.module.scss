@@ -1,3 +1,23 @@
+//**First Render Animation**//
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .stickyBackground {
     position: relative;
 }
@@ -6,7 +26,7 @@
     display: block;
     position: absolute;
     content: '';
-    background: url('../../../assets/afterHeroImageTopRight.svg') no-repeat;
+    background: url('../../../assets/heroSection/afterHeroImageTopRight.svg') no-repeat;
     top: -170px;
     right: 0;
     z-index: -1;
@@ -25,8 +45,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 100px;
     margin: 82px 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .heroSectionWrapper {
+        gap: 20px;
+    }
 }
 
 .heroSectionText {
@@ -35,10 +62,31 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+    flex: 1;
 }
 
 .description {
     color: rgba(51, 27, 59, 0.66);
     line-height: 146.3%;
     letter-spacing: 0.34px;
+}
+
+.imageWrap {
+    flex: 1;
+}
+
+.heroImageMask {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    .imageWrap {
+        display: none;
+    }
+
+    .heroSectionText {
+        text-align: center;
+        align-items: center;
+    }
 }

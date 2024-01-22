@@ -4,6 +4,12 @@
     padding-bottom: 84px;
 }
 
+@media (min-width: 440px) and (max-width: 1023px) {
+    .ourWorksWrapper {
+        padding-bottom: 150px;
+    }
+}
+
 .titleWrapper {
     display: flex;
     flex-direction: row;
@@ -12,10 +18,17 @@
 }
 
 .ourWorkText {
-    flex-basis: 65%;
+    flex: 1;
     font-size: 48px;
 }
 
 .descriptionText {
-    flex-basis: 35%;
+    flex: 0.7;
+}
+
+@media (min-width: 440px) and (max-width: 767px) {
+    .titleWrapper {
+        flex-direction: column;
+        text-align: center;
+    }
 }

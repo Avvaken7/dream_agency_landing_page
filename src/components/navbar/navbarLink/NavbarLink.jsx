@@ -23,9 +23,17 @@ const NavbarLink = () => {
         element.addEventListener('click', handleClick);
         window.addEventListener('click', handleWindowClick);
 
+        if (isActiveMenu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+
         return () => {
             element.removeEventListener('click', handleClick);
             window.removeEventListener('click', handleWindowClick);
+            document.body.style.overflow = 'auto';
         };
     }, [isActiveMenu]);
 

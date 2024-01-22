@@ -11,7 +11,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 448px;
+    max-width: 448px;
     background: #FFF;
     box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.08);
     padding: 39px 29px;
@@ -43,4 +43,19 @@
     width: 11px;
     height: 3px;
     background: #FDC221;
+}
+
+@media (min-width: 767px) and (max-width: 1280px) {
+    .testimonialWrapper {
+        gap: 20px;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 766px) {
+    .testimonialWrapper {
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
 }

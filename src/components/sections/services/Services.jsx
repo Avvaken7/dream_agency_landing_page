@@ -75,7 +75,7 @@ const Services = () => {
                 breakpoint: 1280,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             },
             {

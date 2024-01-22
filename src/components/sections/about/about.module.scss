@@ -30,14 +30,15 @@
 
 
 @media (min-width: 320px) and (max-width: 1023px) {
-    .aboutImageWrap {
-        display: none;
-    }
-
     .aboutSectionWrapper {
         gap: 20px;
         margin: 100px 0px;
     }
+
+    .aboutImageWrap {
+        display: none;
+    }
+
 
     .aboutTextWrap {
         flex: 1;

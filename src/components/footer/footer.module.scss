@@ -96,12 +96,12 @@
 }
 
 @media (min-width: 767px) and (max-width: 1280px) {
-    .footerContent {
-        gap: 50px;
-    }
-
     .footerWrapper {
         border-radius: 0px;
+    }
+
+    .footerContent {
+        gap: 50px;
     }
 }
 

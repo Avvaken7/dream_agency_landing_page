@@ -12,8 +12,7 @@ export default defineConfig({
         return {
           code: css,
           map: null,
-          // Вказати кодування тут
-          encoding: 'utf-8'
+          encoding: 'UTF-8'
         };
       },
     },

@@ -3,5 +3,19 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    {
+      name: 'css',
+      apply: 'build',
+      transform(css) {
+        return {
+          code: css,
+          map: null,
+          // Вказати кодування тут
+          encoding: 'utf-8'
+        };
+      },
+    },
+  ],
+});

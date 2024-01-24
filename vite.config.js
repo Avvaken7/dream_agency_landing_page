@@ -5,16 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [
     react(),
-    {
-      name: 'css',
-      apply: 'build',
-      transform(css) {
-        return {
-          code: css,
-          map: null,
-          encoding: 'UTF-8'
-        };
-      },
-    },
   ],
 });

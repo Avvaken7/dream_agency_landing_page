@@ -4,7 +4,7 @@
     padding-bottom: 84px;
 }
 
-@media (min-width: 440px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 1023px) {
     .ourWorksWrapper {
         padding-bottom: 150px;
     }
@@ -26,9 +26,11 @@
     flex: 0.7;
 }
 
-@media (min-width: 440px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .titleWrapper {
         flex-direction: column;
+        gap: 20px;
         text-align: center;
+        margin-bottom: 50px;
     }
 }

@@ -95,6 +95,17 @@
     height: auto;
 }
 
+@media (min-width: 320px) and (max-width: 992px) {
+    .form {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
+}
+
 @media (min-width: 767px) and (max-width: 1280px) {
     .footerWrapper {
         border-radius: 0px;

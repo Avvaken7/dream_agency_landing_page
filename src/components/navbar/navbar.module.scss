@@ -9,3 +9,10 @@
         margin-top: 20px;
     }
 }
+
+@media (max-width: 440px) {
+    .navbar {
+        justify-content: flex-start;
+        gap: 10%;
+    }
+}

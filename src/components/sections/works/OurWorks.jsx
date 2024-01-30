@@ -60,6 +60,7 @@ const OurWorks = () => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    centerMode: false,
                 }
             },
             {
@@ -67,6 +68,7 @@ const OurWorks = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    centerMode: false,
                 }
             },
         ]
